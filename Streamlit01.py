@@ -9,13 +9,13 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.header("Versicolor")
-    st.image("./image/versicolor.jpg")
+    st.image("./img/Versicolor.jpg")
 with col2:
     st.header("Verginica")
-    st.image("./image/verginica.jpg")
+    st.image("./img/virginica.jpg")
 with col3:
     st.header("Setosa")
-    st.image("./image/setosa.jpg")
+    st.image("./img/setosa.jpg")
 
 df=pd.read_csv("./data/iris.csv")    
  
