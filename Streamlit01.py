@@ -40,23 +40,22 @@ else:
 
 import matplotlib.pyplot as plt
 
-if(st.button("เเสดงกราฟวงกลม")):
-    chart_data = pd.DataFrame(
-    {
-    labels='sepal.width', 'sepal.length', 'petal.width', 'petal.length'
+if(st.button("เเสดงข้อมูลกราฟวงกลม")):
+    #st.write(df.head(10)) 
+    labels = 'sepal.width', 'sepal.length', 'petal.width', 'petal.length'
     x1=df['sepal.width'].mean()
     x2=df['sepal.length'].mean()
-    x3=df['petal.width'].mean() 
+    x3=df['petal.width'].mean()
     x4=df['petal.length'].mean()
     sizes = [x1, x2, x3, x4]
-    explode = (0, 0.1, 0, 0)  
+    explode = (0, 0.1, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
+
     fig1, ax1 = plt.subplots()
     ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
-    shadow=True, startangle=90)
-   st.pyplot(fig1)    
-)
-}
-    st.button("ไม่เเสดงกราฟวงกลม")
-else:
-    st.button("ไม่เเสดงกราฟวงกลม")    
+            shadow=True, startangle=90)
+    #ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
+    st.pyplot(fig1) 
+    st.button("ไม่เเสดงข้อมูลกราฟวงกลม")
+else :
+    st.button("ไม่เเสดงข้อมูลกราฟวงกลม")
